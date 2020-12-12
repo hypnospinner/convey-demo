@@ -1,0 +1,84 @@
+POST http://localhost:5000/unicorn/hire HTTP/1.1
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5NmFhYzc1NC04MjRhLTQxYzgtOTYwNC1lZGJhOWE5NTY1YjMiLCJ1bmlxdWVfbmFtZSI6Ijk2YWFjNzU0LTgyNGEtNDFjOC05NjA0LWVkYmE5YTk1NjViMyIsImp0aSI6Ijc5ODVkYzllLTE2NWItNDdiNS04NGQwLTJjMWFlMGQ0YmU4ZiIsImlhdCI6IjE2MDc3NTk0NzMiLCJuYmYiOjE2MDc3NTk0NzMsImV4cCI6MTYwNzc2MzA3MywiaXNzIjoidW5pY29ybl9wYXJ0eV9pc3N1ZXIifQ.CthU8XolvjN_UzNTjjF8rOGZvmtL2m5EKFtvjGiv_us
+
+{
+    "name": "Luke",
+    "age": 47,
+    "description": "Once beaten his father",
+    "cornLength": 17.3
+}
+
+###
+
+GET http://localhost:5000/unicorn/get HTTP/1.1
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5NmFhYzc1NC04MjRhLTQxYzgtOTYwNC1lZGJhOWE5NTY1YjMiLCJ1bmlxdWVfbmFtZSI6Ijk2YWFjNzU0LTgyNGEtNDFjOC05NjA0LWVkYmE5YTk1NjViMyIsImp0aSI6Ijc5ODVkYzllLTE2NWItNDdiNS04NGQwLTJjMWFlMGQ0YmU4ZiIsImlhdCI6IjE2MDc3NTk0NzMiLCJuYmYiOjE2MDc3NTk0NzMsImV4cCI6MTYwNzc2MzA3MywiaXNzIjoidW5pY29ybl9wYXJ0eV9pc3N1ZXIifQ.CthU8XolvjN_UzNTjjF8rOGZvmtL2m5EKFtvjGiv_us
+
+### 
+
+POST http://localhost:5000/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "hypnospinner@gmail.com",
+    "firstName": "Ilya",
+    "lastName": "Katun",
+    "password": "basicPassword123"
+}
+
+###
+
+POST http://localhost:5000/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "hypnospinner@gmail.com",
+    "password": "basicPassword123"
+}
+
+###
+
+GET http://localhost:5000/user/get HTTP/1.1
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5NmFhYzc1NC04MjRhLTQxYzgtOTYwNC1lZGJhOWE5NTY1YjMiLCJ1bmlxdWVfbmFtZSI6Ijk2YWFjNzU0LTgyNGEtNDFjOC05NjA0LWVkYmE5YTk1NjViMyIsImp0aSI6Ijc5ODVkYzllLTE2NWItNDdiNS04NGQwLTJjMWFlMGQ0YmU4ZiIsImlhdCI6IjE2MDc3NTk0NzMiLCJuYmYiOjE2MDc3NTk0NzMsImV4cCI6MTYwNzc2MzA3MywiaXNzIjoidW5pY29ybl9wYXJ0eV9pc3N1ZXIifQ.CthU8XolvjN_UzNTjjF8rOGZvmtL2m5EKFtvjGiv_us
+
+###
+
+POST http://localhost:5000/party/order HTTP/1.1
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5NmFhYzc1NC04MjRhLTQxYzgtOTYwNC1lZGJhOWE5NTY1YjMiLCJ1bmlxdWVfbmFtZSI6Ijk2YWFjNzU0LTgyNGEtNDFjOC05NjA0LWVkYmE5YTk1NjViMyIsImp0aSI6Ijc5ODVkYzllLTE2NWItNDdiNS04NGQwLTJjMWFlMGQ0YmU4ZiIsImlhdCI6IjE2MDc3NTk0NzMiLCJuYmYiOjE2MDc3NTk0NzMsImV4cCI6MTYwNzc2MzA3MywiaXNzIjoidW5pY29ybl9wYXJ0eV9pc3N1ZXIifQ.CthU8XolvjN_UzNTjjF8rOGZvmtL2m5EKFtvjGiv_us
+
+{
+    "unicornId": "e4762900-c26f-48a9-900a-bd4bf07f54b1",
+    "address": "SPb",
+    "price": 100.50
+}
+
+###
+
+POST http://localhost:5000/party/pay HTTP/1.1
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5NmFhYzc1NC04MjRhLTQxYzgtOTYwNC1lZGJhOWE5NTY1YjMiLCJ1bmlxdWVfbmFtZSI6Ijk2YWFjNzU0LTgyNGEtNDFjOC05NjA0LWVkYmE5YTk1NjViMyIsImp0aSI6Ijc5ODVkYzllLTE2NWItNDdiNS04NGQwLTJjMWFlMGQ0YmU4ZiIsImlhdCI6IjE2MDc3NTk0NzMiLCJuYmYiOjE2MDc3NTk0NzMsImV4cCI6MTYwNzc2MzA3MywiaXNzIjoidW5pY29ybl9wYXJ0eV9pc3N1ZXIifQ.CthU8XolvjN_UzNTjjF8rOGZvmtL2m5EKFtvjGiv_us
+
+{
+    "id": "8bbb0735-6b47-4042-a00c-fccc9e2c7ec3"
+}
+
+###
+
+POST http://localhost:5000/party/finish HTTP/1.1
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5NmFhYzc1NC04MjRhLTQxYzgtOTYwNC1lZGJhOWE5NTY1YjMiLCJ1bmlxdWVfbmFtZSI6Ijk2YWFjNzU0LTgyNGEtNDFjOC05NjA0LWVkYmE5YTk1NjViMyIsImp0aSI6Ijc5ODVkYzllLTE2NWItNDdiNS04NGQwLTJjMWFlMGQ0YmU4ZiIsImlhdCI6IjE2MDc3NTk0NzMiLCJuYmYiOjE2MDc3NTk0NzMsImV4cCI6MTYwNzc2MzA3MywiaXNzIjoidW5pY29ybl9wYXJ0eV9pc3N1ZXIifQ.CthU8XolvjN_UzNTjjF8rOGZvmtL2m5EKFtvjGiv_us
+
+{
+    "id": "8bbb0735-6b47-4042-a00c-fccc9e2c7ec3"
+}
+
+###
+
+GET http://localhost:5000/party/get_user HTTP/1.1
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5NmFhYzc1NC04MjRhLTQxYzgtOTYwNC1lZGJhOWE5NTY1YjMiLCJ1bmlxdWVfbmFtZSI6Ijk2YWFjNzU0LTgyNGEtNDFjOC05NjA0LWVkYmE5YTk1NjViMyIsImp0aSI6Ijc5ODVkYzllLTE2NWItNDdiNS04NGQwLTJjMWFlMGQ0YmU4ZiIsImlhdCI6IjE2MDc3NTk0NzMiLCJuYmYiOjE2MDc3NTk0NzMsImV4cCI6MTYwNzc2MzA3MywiaXNzIjoidW5pY29ybl9wYXJ0eV9pc3N1ZXIifQ.CthU8XolvjN_UzNTjjF8rOGZvmtL2m5EKFtvjGiv_us
+
+###
+
+GET http://localhost:5000/party/get HTTP/1.1
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5NmFhYzc1NC04MjRhLTQxYzgtOTYwNC1lZGJhOWE5NTY1YjMiLCJ1bmlxdWVfbmFtZSI6Ijk2YWFjNzU0LTgyNGEtNDFjOC05NjA0LWVkYmE5YTk1NjViMyIsImp0aSI6Ijc5ODVkYzllLTE2NWItNDdiNS04NGQwLTJjMWFlMGQ0YmU4ZiIsImlhdCI6IjE2MDc3NTk0NzMiLCJuYmYiOjE2MDc3NTk0NzMsImV4cCI6MTYwNzc2MzA3MywiaXNzIjoidW5pY29ybl9wYXJ0eV9pc3N1ZXIifQ.CthU8XolvjN_UzNTjjF8rOGZvmtL2m5EKFtvjGiv_us
